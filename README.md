@@ -2,22 +2,76 @@
 
 # 🧠 REST APIs with Flask and Python
 
-This project demonstrates how to build and structure RESTful APIs using **Python** and the **Flask** web framework. It covers everything from setting up basic routes to handling data with request methods (GET, POST, PUT, DELETE), integrating JSON responses, and building scalable, modular API designs.
+![REST API with Flask and Python](assets/rest-api-flask-python.png)
+
+This project is a full-featured REST API built using **Flask** and **Python**. It demonstrates how to design scalable and modular APIs with authentication, validation, documentation, and database integration.
+
+---
 
 ## 🔧 Features
 
-- ✅ RESTful API architecture  
-- 🚀 Built with Flask and Python  
-- 🔄 CRUD operations (Create, Read, Update, Delete)  
-- 🧪 Simple test routes  
-- 📦 Easy to extend and scale  
-- 🧩 Clean and modular code structure  
+- ✅ RESTful API architecture
+- 🔐 JWT-based user authentication (access + refresh tokens)
+- 📘 Auto-generated Swagger (OpenAPI) documentation
+- 🧩 Modular code structure for scalability
+- 🗃️ SQLAlchemy ORM with PostgreSQL or SQLite
+- 📦 Docker support (optional)
+- 🔄 CRUD operations
+- 📂 JWT token blocklisting (logout functionality)
+
+---
 
 ## 📁 Tech Stack
 
-- **Python 3.x**  
-- **Flask**  
-- (Optional) Flask-RESTful, Marshmallow, SQLAlchemy  
+- **Python 3.x**
+- **Flask**
+- **Flask-JWT-Extended**
+- **Flask-SQLAlchemy**
+- **Flask-Marshmallow**
+- **Flask-RESTful**
+- **Flasgger** (for Swagger docs)
+- **SQLite / PostgreSQL**
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/rest-apis-project.git
+cd rest-apis-project
+
+# Create virtual environment
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+
+pip install -r requirements.txt
+
+⚙️ Environment Setup
+
+FLASK_APP=app.py
+FLASK_ENV=development
+
+
+⚙️ Database Migrations
+
+# Initialize migration folder
+flask db init
+
+# Generate migration script
+flask db migrate -m "Initial migration"
+
+# Apply migration
+flask db upgrade
+
+🏃 Run the Application
+ 
+ flask run
 
 ![REST API Project with Flask and Python](assets/rest-api-flask-python.png)
 
